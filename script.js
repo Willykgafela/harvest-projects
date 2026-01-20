@@ -32,7 +32,7 @@ function handleMenuResponsiveness() {
 
 // Close menu when a navigation link is clicked
 document.addEventListener("DOMContentLoaded", function() {
-  const navLinks = document.querySelectorAll("nav ul li a");
+  const navLinks = document.querySelectorAll(".nav-links a");
   const nav = document.getElementById("nav");
   const menuToggle = document.querySelector(".menu-toggle");
 

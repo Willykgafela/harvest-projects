@@ -75,6 +75,15 @@ nav ul {
   width: 100%;
 }
 
+nav .nav-links {
+  display: flex;
+  list-style: none;
+  transition: all 0.3s ease;
+  gap: 0;
+  width: 100%;
+  flex-direction: row;
+}
+
 nav ul li {
   flex-shrink: 0;
 }
@@ -650,28 +659,44 @@ h1, h2, h3 {
     display: flex;
   }
 
-  nav ul li {
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
     width: 100%;
-    text-align: center;
+    background: linear-gradient(135deg, #1a4d2e 0%, #2d5a3d 100%);
     padding: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    flex-shrink: 0;
+    z-index: 999;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
   }
 
-  nav ul li:last-child {
+  nav .nav-links.show {
+    display: flex;
+  }
+
+  nav .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e6ac0d;
+    font-size: 0.95rem;
+    white-space: normal;
+    margin-left: 0 !important;
+  }
+
+  nav .nav-links a:last-child {
     border-bottom: none;
   }
 
-  nav ul li a {
-    margin-left: 0;
-    color: #e6ac0d;
-    font-size: 0.95rem;
-    padding: 12px 0;
-    white-space: normal;
-  }
-
-  nav ul li a:hover,
-  nav ul li a.active {
+  nav .nav-links a:hover,
+  nav .nav-links a.active {
     color: #a8d5ba;
   }
 
@@ -901,6 +926,41 @@ h1, h2, h3 {
     display: flex;
   }
 
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(135deg, #1a4d2e 0%, #2d5a3d 100%);
+    padding: 0;
+    z-index: 999;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  nav .nav-links.show {
+    display: flex;
+  }
+
+  nav .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e6ac0d;
+    white-space: normal;
+    margin-left: 0 !important;
+  }
+
+  nav .nav-links a:last-child {
+    border-bottom: none;
+  }
+
   nav ul li {
     width: 100%;
     text-align: center;
@@ -918,9 +978,6 @@ h1, h2, h3 {
     color: #e6ac0d;
     padding: 12px 0;
     white-space: normal;
-  }
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   nav ul li:last-child {

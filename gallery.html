@@ -8,21 +8,26 @@
 </head>
 
 <body>
-<header class="header">...</header>
-<nav id="nav">
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<header class="header">
+  <div class="logo">
+    <img src="images/LOGO.jpg" alt="Harvest&Projects Logo" class="logo-img">
+    <div class="logo-text">Harvest&Projects<span>Interior Design</span></div>
+  </div>
+  <nav id="nav">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
   <div class="menu-toggle" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </div>
+</header>
 <section class="page-header">
   <h1>Our Work</h1>
 </section>
@@ -56,6 +61,10 @@
 
 <div id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img">
+</div>
+
+<div style="text-align: center; margin: 40px 0;">
+  <a href="index.html" class="btn">← Back to Home</a>
 </div>
 
 <footer>© 2026 Harvest&Projects</footer>
