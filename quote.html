@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Quote — Harvest & Projects</title>
+  <meta name="description" content="Request a quote for carpentry and custom woodwork">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Harvest & Projects</div>
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="quote.html" class="btn">Get a Quote</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="page">
+<h1>Request a Quote</h1>
+
+<form id="quoteForm">
+  <input type="text" placeholder="Name" required>
+  <input type="tel" placeholder="Phone" required>
+  <input type="email" placeholder="Email" required>
+  <select required>
+    <option value="">Select Service</option>
+    <option>Kitchen</option>
+    <option>Wardrobe</option>
+    <option>Furniture</option>
+  </select>
+  <textarea placeholder="Project Details"></textarea>
+  <input type="file" id="fileInput" accept="image/*" multiple>
+  <div id="quotePreview" class="preview-grid" aria-live="polite"></div>
+  <button type="submit" class="btn">Submit</button>
+</form>
+
+<p id="successMessage"></p>
+
+</section>
+
+<footer>
+  <p>📞 +27 71 137 8777 | 📍 Gauteng</p>
+  <p>© 2026 Harvest & Projects</p>
+</footer>
+
+<a href="https://wa.me/27711378777" class="whatsapp">💬</a>
+
+<!-- Lightbox modal (shared) -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-content">
+    <button id="lightboxClose" aria-label="Close">✕</button>
+    <img id="lightboxImg" src="" alt="">
+    <p id="lightboxCaption"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

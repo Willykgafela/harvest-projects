@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Harvest&Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="header">...</header>
+<nav id="nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+<section class="page-header">
+  <h1>Our Work</h1>
+</section>
+
+<div class="filters">
+  <button onclick="filterGallery('all')">All</button>
+  <button onclick="filterGallery('kitchen')">Kitchens</button>
+  <button onclick="filterGallery('wardrobe')">Wardrobes</button>
+  <button onclick="filterGallery('tvstand')">TV Stands</button>
+  <button onclick="filterGallery('aluminum')">Aluminum Doors & Windows</button>
+</div>
+
+<div class="gallery">
+  <img src="images/kitchen4.jpeg" class="gallery-item kitchen" onclick="openLightbox(this)" alt="Kitchen Project 1">
+  <img src="images/wordrobe2.jpeg" class="gallery-item wardrobe" onclick="openLightbox(this)" alt="Wardrobe Project 1">
+  <img src="images/kitchen5.jpeg" class="gallery-item kitchen" onclick="openLightbox(this)" alt="Kitchen Project 2">
+  <img src="images/wardrobe.jpeg" class="gallery-item wardrobe" onclick="openLightbox(this)" alt="Wardrobe Project 2">
+  <img src="images/tv stand3.jpeg" class="gallery-item tvstand" onclick="openLightbox(this)" alt="TV Stand Project 1">
+  <img src="images/aluminium4.jpeg" class="gallery-item aluminum" onclick="openLightbox(this)" alt="Aluminum Doors & Windows Project 1">
+  <img src="images/tv stand1.jpeg" class="gallery-item tvstand" onclick="openLightbox(this)" alt="TV Stand Project 2">
+  <img src="images/aluminium5.jpeg" class="gallery-item aluminum" onclick="openLightbox(this)" alt="Aluminum Doors & Windows Project 2">
+  <img src="images/kitchen6.jpeg" class="gallery-item kitchen" onclick="openLightbox(this)" alt="Kitchen Project 3">
+  <img src="images/wardrobe3.jpeg" class="gallery-item wardrobe" onclick="openLightbox(this)" alt="Wardrobe Project 3">
+  <img src="images/wardrobe4.jpeg" class="gallery-item tvstand" onclick="openLightbox(this)" alt="TV Stand Project 3">
+  <img src="images/aluminium6.jpeg" class="gallery-item aluminum" onclick="openLightbox(this)" alt="Aluminum Doors & Windows Project 3">
+  <img src="images/mirror.jpeg" class="gallery-item wardrobe" onclick="openLightbox(this)" alt="Wardrobe Project 4">
+  <img src="images/wadrobe5.jpeg" class="gallery-item tvstand" onclick="openLightbox(this)" alt="TV Stand Project 4">
+  <img src="images/wardrobe6.jpeg" class="gallery-item aluminum" onclick="openLightbox(this)" alt="Aluminum Doors & Windows Project 4">
+  <img src="images/kitchen 7.jpeg" class="gallery-item tvstand" onclick="openLightbox(this)" alt="TV Stand Project 5">
+</div>
+
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<footer>© 2026 Harvest&Projects</footer>
+<script src="script.js"></script>
+</body>
+</html>
+

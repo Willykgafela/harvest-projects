@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Harvest&Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="header">...</header>
+<nav id="nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+<section class="page-header">
+  <h1>Our Services</h1>
+</section>
+
+<section class="services-grid">
+  <div class="service-card" onclick="toggleDetails(this)">
+    <img src="images/KITCHEN3.jpeg" alt="Kitchen Cupboards" onclick="openLightbox(event)">
+    <h3>Kitchen Cupboards</h3>
+    <p class="details">Custom-designed kitchens with premium finishes.</p>
+  </div>
+  <div class="service-card" onclick="toggleDetails(this)">
+    <img src="images/wardrobe.jpeg" alt="Wardrobes" onclick="openLightbox(event)">
+    <h3>Wardrobes</h3>
+    <p class="details">Built-in wardrobes designed for space & style.</p>
+  </div>
+  <div class="service-card" onclick="toggleDetails(this)">
+    <img src="images/tv stand3.jpeg" alt="TV Stands" onclick="openLightbox(event)">
+    <h3>TV Stands</h3>
+    <p class="details">Modern TV stands and entertainment units.</p>
+     </div>
+     <div class="service-card" onclick="toggleDetails(this)">
+    <img src="images/aluminium3.jpeg" alt="Aluminum Doors & Windows" onclick="openLightbox(event)">
+    <h3>Aluminum Doors & Windows</h3>
+    <p class="details">Durable aluminum doors and windows for modern homes.</p>
+  </div>
+</section>
+
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<footer>© 2026 Harvest&Projects</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
