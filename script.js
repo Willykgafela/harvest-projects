@@ -13,10 +13,20 @@ document.addEventListener("DOMContentLoaded", function() {
   const menuToggle = document.querySelector(".menu-toggle");
 
   navLinks.forEach(link => {
-    link.addEventListener("click", function() {
+    link.addEventListener("click", function(e) {
+      const href = this.getAttribute("href");
+      
+      // Close menu immediately
       nav.classList.remove("show");
       if (menuToggle) {
         menuToggle.classList.remove("active");
+      }
+
+      // Allow natural navigation to occur
+      // Page will load with smooth transition
+      if (!href.startsWith("#")) {
+        // For external page navigation, allow default behavior
+        // This ensures the page transition happens naturally
       }
     });
   });
@@ -74,8 +84,8 @@ window.onscroll = () => {
     backToTop.style.display = window.scrollY > 300 ? "block" : "none";
   }
 };
-;
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
 }
