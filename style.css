@@ -327,6 +327,102 @@ h1, h2, h3 {
   font-size: 2.5rem;
 }
 
+/* Quote Page Styles */
+.page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.page h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1a4d2e;
+  font-size: 2.2rem;
+}
+
+#quoteForm {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#quoteForm input,
+#quoteForm select,
+#quoteForm textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #2c2c2c;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+#quoteForm input::placeholder,
+#quoteForm textarea::placeholder {
+  color: #999;
+}
+
+#quoteForm input:focus,
+#quoteForm select:focus,
+#quoteForm textarea:focus {
+  outline: none;
+  border-color: #2d9d78;
+  box-shadow: 0 0 0 3px rgba(45, 157, 120, 0.1);
+  background: #f9fdf7;
+}
+
+#quoteForm select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  padding-right: 40px;
+}
+
+#quoteForm button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.preview-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.preview-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(45, 157, 120, 0.2);
+}
+
+#successMessage {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d9d78;
+  display: none;
+}
+
 .contact-container {
   max-width: 1000px;
   margin: 60px auto;
@@ -614,6 +710,37 @@ h1, h2, h3 {
     font-size: 16px;
   }
 
+  #quoteForm {
+    padding: 20px;
+  }
+
+  #quoteForm input,
+  #quoteForm select,
+  #quoteForm textarea {
+    padding: 12px 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .preview-grid img {
+    height: 120px;
+  }
+
+  .page {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .page h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
   .contact-options {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -793,6 +920,37 @@ h1, h2, h3 {
     font-size: 2rem;
   }
 
+  .page {
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .page h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  #quoteForm {
+    padding: 30px;
+  }
+
+  #quoteForm input,
+  #quoteForm select,
+  #quoteForm textarea {
+    padding: 13px 15px;
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .preview-grid img {
+    height: 140px;
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -899,6 +1057,36 @@ h1, h2, h3 {
     font-size: 2.2rem;
   }
 
+  .page {
+    margin: 50px auto;
+    padding: 0 25px;
+  }
+
+  .page h1 {
+    font-size: 2.1rem;
+    margin-bottom: 35px;
+  }
+
+  #quoteForm {
+    padding: 35px;
+  }
+
+  #quoteForm input,
+  #quoteForm select,
+  #quoteForm textarea {
+    padding: 13px 15px;
+    margin-bottom: 20px;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+  }
+
+  .preview-grid img {
+    height: 160px;
+  }
+
   .contact-container {
     grid-template-columns: 1fr 1fr;
     gap: 35px;
@@ -975,6 +1163,35 @@ h1, h2, h3 {
 
   .page-header h1 {
     font-size: 2.5rem;
+  }
+
+  .page {
+    margin: 60px auto;
+    padding: 0 40px;
+  }
+
+  .page h1 {
+    font-size: 2.2rem;
+  }
+
+  #quoteForm {
+    padding: 40px;
+  }
+
+  #quoteForm input,
+  #quoteForm select,
+  #quoteForm textarea {
+    padding: 14px 16px;
+    margin-bottom: 20px;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+  }
+
+  .preview-grid img {
+    height: 180px;
   }
 
   .contact-container {
