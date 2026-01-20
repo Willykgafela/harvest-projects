@@ -6,27 +6,54 @@ function toggleMenu() {
   menuToggle.classList.toggle("active");
 }
 
+// Handle responsive menu behavior
+function handleMenuResponsiveness() {
+  const nav = document.getElementById("nav");
+  const menuToggle = document.querySelector(".menu-toggle");
+  
+  if (window.innerWidth > 768) {
+    // Desktop: ensure menu is visible and toggle is hidden
+    nav.classList.remove("show");
+    if (menuToggle) {
+      menuToggle.classList.remove("active");
+      menuToggle.style.display = "none";
+    }
+  } else {
+    // Mobile: show toggle, keep menu hidden until clicked
+    if (menuToggle) {
+      menuToggle.style.display = "flex";
+    }
+    nav.classList.remove("show");
+    if (menuToggle) {
+      menuToggle.classList.remove("active");
+    }
+  }
+}
+
 // Close menu when a navigation link is clicked
 document.addEventListener("DOMContentLoaded", function() {
   const navLinks = document.querySelectorAll("nav ul li a");
   const nav = document.getElementById("nav");
   const menuToggle = document.querySelector(".menu-toggle");
 
+  // Initial responsiveness check
+  handleMenuResponsiveness();
+
   navLinks.forEach(link => {
     link.addEventListener("click", function(e) {
       const href = this.getAttribute("href");
       
-      // Close menu immediately
-      nav.classList.remove("show");
-      if (menuToggle) {
-        menuToggle.classList.remove("active");
+      // Close menu immediately on mobile
+      if (window.innerWidth <= 768) {
+        nav.classList.remove("show");
+        if (menuToggle) {
+          menuToggle.classList.remove("active");
+        }
       }
 
       // Allow natural navigation to occur
-      // Page will load with smooth transition
       if (!href.startsWith("#")) {
         // For external page navigation, allow default behavior
-        // This ensures the page transition happens naturally
       }
     });
   });
@@ -34,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Close menu when clicking outside
   document.addEventListener("click", function(event) {
     const isClickInside = nav.contains(event.target) || (menuToggle && menuToggle.contains(event.target));
-    if (!isClickInside && nav.classList.contains("show")) {
+    if (!isClickInside && nav.classList.contains("show") && window.innerWidth <= 768) {
       nav.classList.remove("show");
       if (menuToggle) {
         menuToggle.classList.remove("active");
@@ -42,14 +69,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // Close menu on resize to desktop size
+  // Handle resize events for responsive behavior
+  let resizeTimer;
   window.addEventListener("resize", function() {
-    if (window.innerWidth > 768) {
-      nav.classList.remove("show");
-      if (menuToggle) {
-        menuToggle.classList.remove("active");
-      }
-    }
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      handleMenuResponsiveness();
+    }, 250);
   });
 });
 
@@ -88,4 +114,4 @@ window.onscroll = () => {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
-}
+

@@ -30,6 +30,8 @@ body.fade-out {
   position: sticky;
   top: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .logo {
@@ -59,10 +61,22 @@ body.fade-out {
   letter-spacing: 1px;
 }
 
+nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
 nav ul {
   display: flex;
   list-style: none;
   transition: all 0.3s ease;
+  gap: 0;
+  width: 100%;
+}
+
+nav ul li {
+  flex-shrink: 0;
 }
 
 nav ul li a {
@@ -73,6 +87,7 @@ nav ul li a {
   transition: color 0.3s ease;
   position: relative;
   display: block;
+  white-space: nowrap;
 }
 
 nav ul li a:hover,
@@ -604,30 +619,31 @@ h1, h2, h3 {
 @media (max-width: 480px) {
   .header {
     padding: 12px 15px;
+    justify-content: space-between;
   }
 
-  .logo {
-    font-size: 18px;
-    gap: 8px;
-  }
-
-  .logo-img {
-    height: 40px;
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   nav ul {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
     width: 100%;
     background: linear-gradient(135deg, #1a4d2e 0%, #2d5a3d 100%);
-    padding: 15px 0;
+    padding: 0;
     z-index: 999;
     max-height: calc(100vh - 60px);
     overflow-y: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 0;
+    position: relative;
+    top: auto;
+    left: auto;
   }
 
   nav ul.show {
@@ -637,8 +653,9 @@ h1, h2, h3 {
   nav ul li {
     width: 100%;
     text-align: center;
-    padding: 12px 0;
+    padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
   }
 
   nav ul li:last-child {
@@ -649,6 +666,8 @@ h1, h2, h3 {
     margin-left: 0;
     color: #e6ac0d;
     font-size: 0.95rem;
+    padding: 12px 0;
+    white-space: normal;
   }
 
   nav ul li a:hover,
@@ -851,25 +870,31 @@ h1, h2, h3 {
 @media (min-width: 481px) and (max-width: 768px) {
   .header {
     padding: 15px 20px;
+    justify-content: space-between;
   }
 
-  .logo {
-    font-size: 20px;
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   nav ul {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
     width: 100%;
     background: linear-gradient(135deg, #1a4d2e 0%, #2d5a3d 100%);
-    padding: 15px 0;
+    padding: 0;
     z-index: 999;
     max-height: calc(100vh - 60px);
     overflow-y: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 0;
+    position: relative;
+    top: auto;
+    left: auto;
   }
 
   nav ul.show {
@@ -879,6 +904,21 @@ h1, h2, h3 {
   nav ul li {
     width: 100%;
     text-align: center;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  nav ul li a {
+    margin-left: 0;
+    color: #e6ac0d;
+    padding: 12px 0;
+    white-space: normal;
+  }
     padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -1038,21 +1078,48 @@ h1, h2, h3 {
     font-size: 0.9rem;
     padding: 10px 15px;
   }
-}
+
 
 /* Tablets & Medium Devices (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .header {
     padding: 15px 25px;
+    position: static;
   }
 
-  .logo {
-    font-size: 22px;
+  nav {
+    position: static;
+    flex: 1;
+  }
+
+  nav ul {
+    display: flex !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    max-height: none !important;
+    box-shadow: none !important;
+    flex-direction: row !important;
+    width: auto !important;
+  }
+
+  nav ul li {
+    padding: 0 !important;
+    border: none !important;
   }
 
   nav ul li a {
     margin-left: 20px;
     font-size: 0.95rem;
+    padding: 0 !important;
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .logo {
+    font-size: 22px;
   }
 
   .hero-content h1 {
@@ -1157,10 +1224,37 @@ h1, h2, h3 {
 @media (min-width: 1025px) {
   .header {
     padding: 15px 40px;
+    position: static;
+  }
+
+  nav {
+    position: static;
+    flex: 1;
+  }
+
+  nav ul {
+    display: flex !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    max-height: none !important;
+    box-shadow: none !important;
+    flex-direction: row !important;
+    width: auto !important;
+  }
+
+  nav ul li {
+    padding: 0 !important;
+    border: none !important;
   }
 
   nav ul li a {
     margin-left: 30px;
+    padding: 0 !important;
+  }
+
+  .menu-toggle {
+    display: none !important;
   }
 
   .hero-content h1 {
