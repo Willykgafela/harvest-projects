@@ -1,35 +1,3 @@
-// Mobile Menu Toggle
-function toggleMenu() {
-  const nav = document.getElementById("nav");
-  const menuToggle = document.querySelector(".menu-toggle");
-  nav.classList.toggle("show");
-  menuToggle.classList.toggle("active");
-}
-
-// Handle responsive menu behavior
-function handleMenuResponsiveness() {
-  const nav = document.getElementById("nav");
-  const menuToggle = document.querySelector(".menu-toggle");
-  
-  if (window.innerWidth > 768) {
-    // Desktop: ensure menu is visible and toggle is hidden
-    nav.classList.remove("show");
-    if (menuToggle) {
-      menuToggle.classList.remove("active");
-      menuToggle.style.display = "none";
-    }
-  } else {
-    // Mobile: show toggle, keep menu hidden until clicked
-    if (menuToggle) {
-      menuToggle.style.display = "flex";
-    }
-    nav.classList.remove("show");
-    if (menuToggle) {
-      menuToggle.classList.remove("active");
-    }
-  }
-}
-
 // Close menu when a navigation link is clicked
 document.addEventListener("DOMContentLoaded", function() {
   const navLinks = document.querySelectorAll(".nav-links a");
