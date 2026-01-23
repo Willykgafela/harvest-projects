@@ -67,13 +67,7 @@ nav {
   align-items: center;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  transition: all 0.3s ease;
-  gap: 0;
-  width: 100%;
-}
+
 
 nav .nav-links {
   display: flex !important;

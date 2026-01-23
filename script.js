@@ -84,8 +84,8 @@ function scrollToTop() {
 }
 
 const menuToggle = document.getElementById("menuToggle");
-const nav = document.getElementById("nav");
+const nav = document.getElementById("nav-links");
 
 menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("show");
+  nav.classList.toggle("active");
 });
