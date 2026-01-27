@@ -1,51 +1,4 @@
-// Close menu when a navigation link is clicked
-document.addEventListener("DOMContentLoaded", function() {
-  const navLinks = document.querySelectorAll(".nav-links a");
-  const nav = document.getElementById("nav");
-  const menuToggle = document.querySelector(".menu-toggle");
 
-  // Initial responsiveness check
-  handleMenuResponsiveness();
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", function(e) {
-      const href = this.getAttribute("href");
-      
-      // Close menu immediately on mobile
-      if (window.innerWidth <= 768) {
-        nav.classList.remove("show");
-        if (menuToggle) {
-          menuToggle.classList.remove("active");
-        }
-      }
-
-      // Allow natural navigation to occur
-      if (!href.startsWith("#")) {
-        // For external page navigation, allow default behavior
-      }
-    });
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener("click", function(event) {
-    const isClickInside = nav.contains(event.target) || (menuToggle && menuToggle.contains(event.target));
-    if (!isClickInside && nav.classList.contains("show") && window.innerWidth <= 768) {
-      nav.classList.remove("show");
-      if (menuToggle) {
-        menuToggle.classList.remove("active");
-      }
-    }
-  });
-
-  // Handle resize events for responsive behavior
-  let resizeTimer;
-  window.addEventListener("resize", function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-      handleMenuResponsiveness();
-    }, 250);
-  });
-});
 
 function toggleDetails(card) {
   card.querySelector(".details").classList.toggle("show");
@@ -83,9 +36,3 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-const menuToggle = document.getElementById("menuToggle");
-const nav = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});

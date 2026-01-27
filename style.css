@@ -146,35 +146,6 @@ nav ul li a.active::after {
   background: #a8d5ba;
 }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  transition: all 0.3s ease;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: #ffffff;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
-
-
 .hero {
   height: 80vh;
   background: url('../images/hero.jpg') center/cover;
@@ -732,9 +703,6 @@ h1, h2, h3 {
     color: #a8d5ba;
   }
 
-  .menu-toggle {
-    display: flex;
-  }
 
   .hero {
     height: 60vh;
@@ -1026,9 +994,6 @@ h1, h2, h3 {
     color: #a8d5ba;
   }
 
-  .menu-toggle {
-    display: flex;
-  }
 
   .hero {
     height: 70vh;
@@ -1493,10 +1458,7 @@ h1, h2, h3 {
     color: #a8d5ba;
   }
 
-  /* Hide hamburger completely */
-  .menu-toggle {
-    display: none !important;
-  }
+  
 }
 
 @media (max-width: 768px) {
@@ -1510,24 +1472,7 @@ h1, h2, h3 {
     justify-content: center;
     text-align: center;
   }
-}
 
-/* Mobile Dropdown Menu */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-  }
-
-  .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #ffffff;
-    border-radius: 2px;
-    transition: 0.3s;
-  }
 
   nav {
     width: 100%;
@@ -1564,11 +1509,6 @@ h1, h2, h3 {
   }
 }
 
-/* Desktop: always show menu */
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
 
   nav .nav-links {
     display: flex !important;
