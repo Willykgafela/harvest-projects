@@ -1108,9 +1108,6 @@ h1, h2, h3 {
     padding: 0 !important;
   }
 
-  .menu-toggle {
-    display: none !important;
-  }
 
   .logo {
     font-size: 22px;
@@ -1245,10 +1242,6 @@ h1, h2, h3 {
   nav ul li a {
     margin-left: 30px;
     padding: 0 !important;
-  }
-
-  .menu-toggle {
-    display: none !important;
   }
 
   .hero-content h1 {
@@ -1438,15 +1431,6 @@ h1, h2, h3 {
     border-bottom: 1px solid rgba(255,255,255,0.15);
   }
 
-  nav .nav-links a:last-child {
-    border-bottom: none;
-  }
-
-  nav .nav-links a:hover,
-  nav .nav-links a.active {
-    background: rgba(255,255,255,0.1);
-    color: #a8d5ba;
-  }
 }
 
 
