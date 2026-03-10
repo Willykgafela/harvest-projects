@@ -1,0 +1,151 @@
+<!-- 
+JSON-LD SCHEMA MARKUP TEMPLATES
+Add these to your HTML pages in the <head> section for better search engine understanding
+-->
+
+<!-- ===== FOR HOME PAGE (index.html) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LocalBusiness",
+  "name": "Harvest&Projects",
+  "description": "Premium interior design and custom carpentry services in Wynberg, Gauteng",
+  "url": "https://harvestprojects.co.za",
+  "telephone": "+27711378777",
+  "email": "info.harvestprojects@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wynberg",
+    "addressLocality": "Wynberg",
+    "addressRegion": "Gauteng",
+    "postalCode": "",
+    "addressCountry": "ZA"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Wynberg, Gauteng"
+  },
+  "priceRange": "$$",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+27711378777",
+    "email": "info.harvestprojects@gmail.com"
+  },
+  "sameAs": [
+    "https://www.facebook.com/harvestprojects",
+    "https://www.instagram.com/harvestprojects",
+    "https://wa.me/27711378777"
+  ]
+}
+</script>
+
+<!-- ===== FOR SERVICES PAGE (services.html) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Service",
+  "name": "Interior Design & Custom Carpentry",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Harvest&Projects",
+    "url": "https://harvestprojects.co.za"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Interior Design Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kitchen Design & Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Wardrobe Design & Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "TV Stand Design & Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Aluminum Doors & Windows"
+        }
+      }
+    ]
+  },
+  "areaServed": "Gauteng"
+}
+</script>
+
+<!-- ===== FOR CONTACT PAGE (contact.html) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "ContactPage",
+  "name": "Contact Harvest&Projects",
+  "url": "https://harvestprojects.co.za/contact.html",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+27711378777",
+    "email": "info.harvestprojects@gmail.com",
+    "areaServed": "ZA",
+    "availableLanguage": "en"
+  }
+}
+</script>
+
+<!-- ===== FOR ORGANIZATION (add to all pages if preferred) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Harvest&Projects",
+  "alternateName": "Harvest and Projects",
+  "url": "https://harvestprojects.co.za",
+  "logo": "https://harvestprojects.co.za/images/LOGO.jpg",
+  "sameAs": [
+    "https://www.facebook.com/harvestprojects",
+    "https://www.instagram.com/harvestprojects",
+    "https://www.linkedin.com/company/harvestprojects"
+  ],
+  "contact": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+27-71-137-8777",
+    "email": "info.harvestprojects@gmail.com"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Wynberg",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  }
+}
+</script>
+
+<!-- HOW TO IMPLEMENT:
+1. Copy one of the JSON-LD scripts above
+2. Paste it inside the <head> section of the corresponding HTML page
+3. Replace placeholder URLs and contact info with your actual information
+4. Test the markup at: https://schema.org/validate
+5. Check implementation in Google Search Console
+
+BENEFITS:
+- Better rich snippets in search results
+- Enhanced local SEO
+- Improved CTR (Click-Through Rate)
+- Better structured data understanding by search engines
+-->

@@ -1,0 +1,19 @@
+# Robots.txt for Harvest&Projects
+# This file helps search engines crawl the website efficiently
+
+User-agent: *
+Allow: /
+Disallow: /private/
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://harvestprojects.co.za/sitemap.xml
+
+# Crawl delay (optional - prevents server overload)
+Crawl-delay: 1
